@@ -1,4 +1,4 @@
-FROM node
+FROM brunobasso/micro_livraria:1.0
 
 ENV NO_UPDATE_NOTIFIER=1
 

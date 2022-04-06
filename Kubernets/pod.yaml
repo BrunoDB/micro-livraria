@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-livraria-deployment
+spec:
+  template:
+    metadata:
+      name: micro-livraria
+      labels:
+        app: micro-livraria
+    spec:
+      containers:
+        - name: micro-livraria
+          image: brunobasso/micro_livraria:1.0
+          ports:
+            - containerPort: 3000
+            - containerPort: 5000
+          resources:  
+            requests:
+              cpu: 10m
+  replicas: 3
+  selector:
+    matchLabels:
+      app: micro-livraria
