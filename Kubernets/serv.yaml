@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-1
+spec:
+  selector:
+    app: micro-livraria
+  ports:
+    - port: 3000

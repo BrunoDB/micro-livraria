@@ -11,14 +11,14 @@ spec:
     spec:
       containers:
         - name: micro-livraria
-          image: brunobasso/micro_livraria:1.0
+          image: brunobasso/micro-livraria:latest
           ports:
             - containerPort: 3000
             - containerPort: 5000
           resources:  
             requests:
               cpu: 10m
-  replicas: 3
+  replicas: 0
   selector:
     matchLabels:
       app: micro-livraria
